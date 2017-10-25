@@ -16,18 +16,20 @@ Code
 -------------
 
 #### **MAIN CODE**: the web crawler
-The main code for craling the web is `crawl_web`. 
+The main code for crawling the web is `crawl_web`. 
 
 From a seed url asked by the user or by default, the content of the page as a string is obtained by `get_page`. By the procedure `add_page_to_index`, the page (a string) will be splitted into small words, which will be added as keywords into a index and the current url will be associated with the keywords found. In addition, the urls expressed on the current page (outlinks) will be extracted by `get_all_links`. To keep crawling from one page to others, with the procedure `union`, the new outlinks will be at theirself also go into the procedure of crawling, get content, keywords and urls. To avoid crawling pages that were already crawled, 2 list ( `tocrawl` and `crawled`) will be used. During the `crawl_web` procedure a graphic showing all the interlinks will be contrusct and could be used in case of use of ranking pages (not included in this code).
 
 The output of this procedure is an index with a list of all the urls where the keywords can be found. Another output is a graph representing all the oulinks that can be reached from each crawled page.
 
-#### **MAIN CODE**: the lookup of the index
+#### **MAIN CODE**: the lookup/search of the index
 The main code to be able to look for urls associated with a keyword is `lookup`. This procedure include the procedure of `crawl_web` to build the index. 
 
 `lookup` ask the user for a keyword. A list of urls where the keyword can be found is returned as output. There is no favorite or specific order for the returned urls.
 
 #### **UTILS**
+
+The following functions are the useful global functions that help the crawling procedure.
 
 ##### `get_page`
 This procedure allows to obtain the contain of a html page as a string, given an url. The url has been previously obtained by the user in `crawl_web`. 
