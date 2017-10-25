@@ -5,7 +5,7 @@ Do your own web search engine
 ----------
 A **web search engine** programmed through the help of online class of Udacity "[Intro to computer science](https://www.udacity.com/course/intro-to-computer-science--cs101)".
 
-**IMPORTANT: the web crawler is not taking the politeness policy into the code.** The code should be modified to interger politness policy before using on the web.
+**IMPORTANT: the web crawler is not taking the politeness policy into the code.** The code should be modified to integrate politness policy before using it.
 
 ### Principles
 A web search engine is based on a **web crawler** and a **search tool**. The web crawler will **browse the web** (in this project: starting from a precise url).  During browsing internet, a index is built linking keywords and the urls where they appears. The search tool will allow, after the browsing, to **return the urls associated with the searched keyword**.
