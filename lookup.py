@@ -1,14 +1,13 @@
-#SEVENTH
-#procedure to respond to query with inputs: an index (see up), a keyword that is search; output: a list of all the urls associated with the keyword. If the keyword is not in the index, the output should be None
+# MAIN CODE 
 
 execfile('crawl_web.py')
 def lookup():
-    index, graph = crawl_web() #crawl web is for a precise url
+    index, graph = crawl_web() 
     keyword = raw_input('Enter a keyword ')
-    if keyword in index:
-        print ("the urls associated with the keyword are: {}".format(index[keyword]))
+    if keyword in index: #keyword present in the index
+        print ("the urls associated with the keyword are: {}".format(index[keyword])) #look in the dictionaary the urls for the enter at this keyword
         return index[keyword]
-    else:
+    else: #keyword not present in the index
         print 'this keyword is not in the index'
         return None
 lookup()

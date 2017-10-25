@@ -1,5 +1,4 @@
-#FOURTH(part2)
-#used to put all the links got from get_all_links to the list tocrawl
+#put all the links got from get_all_links to the list tocrawl
 
 def union(a, b):
     for e in b:
